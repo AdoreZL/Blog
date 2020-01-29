@@ -77,6 +77,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+
         <!-- spring boot 热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
