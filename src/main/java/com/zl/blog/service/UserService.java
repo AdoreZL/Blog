@@ -79,4 +79,38 @@ public class UserService {
 
         return loginTicket.getTicket();
     }
+
+    public Map<String,String> login(String username, String password){
+        Map<String,String> map = new HashMap<>();
+        Random random = new Random();
+        if (StringUtils.isBlank(username)){
+            map.put("msg","用户名不能为空");
+            return map;
+        }
+
+        if (StringUtils.isBlank(password)){
+            map.put("msg","密码不能为空");
+            return map;
+        }
+
+        User u = userDao.seletByName(username);
+        if (u==null){
+            map.put("msg","用户名不存在");
+            return map;
+        }
+
+        if (!Util.MD5(password+u.getSalt()).equals(u.getPassword())){
+            map.put("msg","密码错误");
+            return map;
+        }
+
+        String ticket = addLoginTicket(u.getId());
+        map.put("ticket",ticket);
+
+        return map;
+    }
+
+    public void logout(String ticket){
+        loginTicketDao.updateStatus(ticket,1);
+    }
 }
