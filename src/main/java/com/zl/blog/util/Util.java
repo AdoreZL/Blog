@@ -1,7 +1,11 @@
 package com.zl.blog.util;
 
 import com.alibaba.fastjson.JSONObject;
+import com.vladsch.flexmark.util.options.MutableDataSet;
 import lombok.extern.slf4j.Slf4j;
+import org.commonmark.node.Node;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
 
 import java.security.MessageDigest;
 import java.util.HashMap;
@@ -67,5 +71,15 @@ public class Util {
             log.error("生成MD5失败", e);
             return null;
         }
+    }
+
+
+
+    public static String tranfer(String content){
+        MutableDataSet options = new MutableDataSet();
+        Parser parser = Parser.builder(options).build();
+        HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+        Node document = parser.parse(content);
+        return renderer.render(document);
     }
 }
