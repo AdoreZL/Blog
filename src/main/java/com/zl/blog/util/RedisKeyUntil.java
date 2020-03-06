@@ -1,8 +1,8 @@
 package com.zl.blog.util;
 
 /**
- * Created by tuzhenyu on 17-7-25.
- * @author tuzhenyu
+ * Created by zl.
+ * @author zl
  */
 public class RedisKeyUntil {
     private static String SPLITE = ":";

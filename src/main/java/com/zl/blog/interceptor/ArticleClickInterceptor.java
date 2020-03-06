@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 public class ArticleClickInterceptor implements HandlerInterceptor {
     @Autowired
-    private JedisService jedisService;
+        private JedisService jedisService;
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {

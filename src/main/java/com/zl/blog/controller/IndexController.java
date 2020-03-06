@@ -1,6 +1,5 @@
 package com.zl.blog.controller;
 
-import cn.tzy.Jblog.model.*;
 import com.zl.blog.service.ArticleService;
 import com.zl.blog.service.JedisService;
 import com.zl.blog.service.TagService;
@@ -94,6 +93,7 @@ public class IndexController {
         String countStr3 = jedisService.get(RedisKeyUntil.getClickCountKey("/page/1"));
         String currentPage = String.valueOf(Integer.parseInt(countStr1==null?"0":countStr1)
                 + Integer.parseInt(countStr2==null?"0":countStr2)+ Integer.parseInt(countStr3==null?"0":countStr3));
+        //总阅读数
         String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
         clickCount.set("currentPage",currentPage);
         clickCount.set("sumPage",sumPage);
