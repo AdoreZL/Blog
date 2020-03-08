@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by tuzhenyu on 17-7-26.
- * @author tuzhenyu
+ * Created by zl on 17-7-26.
+ * @author zl
  */
 @Component
 public class MailHandler implements EventHandler{

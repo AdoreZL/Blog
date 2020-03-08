@@ -3,8 +3,8 @@ package com.zl.blog.model;
 import java.util.Date;
 
 /**
- * Created by tuzhenyu on 17-7-20.
- * @author tuzhenyu
+ * Created by zl on 17-7-20.
+ * @author zl
  */
 public class LoginTicket {
     private int id;

@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Created by tuzhenyu on 17-7-23.
- * @author tuzhenyu
+ * Created by zl on 17-7-23.
+ * @author zl
  */
 @Component
 public class Comment {

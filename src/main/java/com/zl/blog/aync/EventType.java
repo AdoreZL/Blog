@@ -1,8 +1,8 @@
 package com.zl.blog.aync;
 
 /**
- * Created by tuzhenyu on 17-7-26.
- * @author tuzhenyu
+ * Created by zl on 17-7-26.
+ * @author zl
  */
 public enum EventType {
     LIKE(0),

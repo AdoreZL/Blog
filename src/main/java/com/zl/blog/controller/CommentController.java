@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Date;
 
 /**
- * Created by tuzhenyu on 17-8-16.
- * @author tuzhenyu
+ * Created by zl on 17-8-16.
+ * @author zl
  */
 @Controller
 public class CommentController {

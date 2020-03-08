@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
- * Created by tuzhenyu on 17-8-18.
- * @author tuzhenyu
+ * Created by zl on 17-8-18.
+ * @author zl
  */
 @Mapper
 public interface ArchiveDao {

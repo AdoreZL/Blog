@@ -3,8 +3,8 @@ package com.zl.blog.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by tuzhenyu on 17-7-20.
- * @author tuzhenyu
+ * Created by zl on 17-7-20.
+ * @author zl
  */
 @Component
 public class HostHolder {

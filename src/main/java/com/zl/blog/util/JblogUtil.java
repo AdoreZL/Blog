@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by nowcoder on 2016/7/3.
- * @author tuzhenyu
+ * Created by zl on 2016/7/3.
+ * @author zl
  */
 public class JblogUtil {
     public static Map<String,String> categoryMap;

@@ -3,8 +3,8 @@ package com.zl.blog.aync;
 import java.util.List;
 
 /**
- * Created by tuzhenyu on 17-7-26.
- * @author tuzhenyu
+ * Created by zl on 17-7-26.
+ * @author zl
  */
 public interface EventHandler {
     void doHandler(EventModel model);

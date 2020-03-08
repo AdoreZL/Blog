@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by tuzhenyu on 17-7-25.
- * @author tuzhenyu
+ * Created by zl on 17-7-25.
+ * @author zl
  */
 @Controller
 public class LikeController {

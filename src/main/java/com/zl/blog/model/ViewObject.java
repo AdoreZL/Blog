@@ -5,8 +5,8 @@ import org.apache.commons.collections.map.HashedMap;
 import java.util.Map;
 
 /**
- * Created by tuzhenyu on 17-7-19.
- * @author tuzhenyu
+ * Created by zl on 17-7-19.
+ * @author zl
  */
 public class ViewObject {
     private Map<String,Object> objects = new HashedMap();

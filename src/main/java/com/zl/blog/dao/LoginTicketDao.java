@@ -4,8 +4,8 @@ import com.zl.blog.model.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
 /**
- * Created by tuzhenyu on 17-7-20.
- * @author tuzhenyu
+ * Created by zl on 17-7-20.
+ * @author zl
  */
 @Mapper
 public interface LoginTicketDao {

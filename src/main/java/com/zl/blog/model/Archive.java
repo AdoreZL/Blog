@@ -1,8 +1,8 @@
 package com.zl.blog.model;
 
 /**
- * Created by tuzhenyu on 17-8-18.
- * @author tuzhenyu
+ * Created by zl on 17-8-18.
+ * @author zl
  */
 public class Archive {
     private int id;

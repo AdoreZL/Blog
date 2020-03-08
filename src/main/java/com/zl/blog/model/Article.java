@@ -3,8 +3,8 @@ package com.zl.blog.model;
 import java.util.Date;
 
 /**
- * Created by tuzhenyu on 17-8-13.
- * @author tuzhenyu
+ * Created by zl on 17-8-13.
+ * @author zl
  */
 public class Article {
     private int id;

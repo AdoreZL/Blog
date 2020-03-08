@@ -6,8 +6,8 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 /**
- * Created by tuzhenyu on 17-8-14.
- * @author tuzhenyu
+ * Created by zl on 17-8-14.
+ * @author zl
  */
 @Mapper
 public interface TagDao {
