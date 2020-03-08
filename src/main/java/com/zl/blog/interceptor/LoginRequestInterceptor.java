@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Created by tuzhenyu on 17-7-20.
- * @author tuzhenyu
+ * Created by zl on 17-7-20.
+ * @author zl
  */
 @Component
 public class LoginRequestInterceptor implements HandlerInterceptor {
