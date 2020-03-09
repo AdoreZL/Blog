@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * Created by zl on 17-7-20.
+ * Created by zl on 20-2-20.
  * @author zl
  */
 @Component

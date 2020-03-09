@@ -13,8 +13,14 @@ package com.example.thread.bank;
 public class Bank{
     private int sum;
 
-    public void add(int num){
-        sum = sum+num;
-        System.out.println("sum="+sum);
+    private Object object =new Object();
+    public synchronized void add(int num) {
+            sum = sum + num;
+//            try {
+//                Thread.sleep(10);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+            System.out.println("sum=" + sum);
     }
 }
