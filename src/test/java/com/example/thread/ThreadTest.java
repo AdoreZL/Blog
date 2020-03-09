@@ -27,7 +27,7 @@ public class ThreadTest {
     public void ticketTest(){
         TicketDemo ticketDemo = new TicketDemo();
 //        TicketDemo ticketDemo1 = new TicketDemo();
-//        TicketDemo ticketDemo2 = new TicketDemo();
+//        TicketDemo ticketDemo2 = new Ti   cketDemo();
 //        TicketDemo ticketDemo3 = new TicketDemo();
         Thread thread = new Thread(ticketDemo);
         Thread thread1 = new Thread(ticketDemo);
