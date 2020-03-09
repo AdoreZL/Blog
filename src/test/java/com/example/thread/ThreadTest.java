@@ -21,4 +21,21 @@ public class ThreadTest {
         d1.start();
         d2.start();
     }
+
+
+    @Test
+    public void ticketTest(){
+        TicketDemo ticketDemo = new TicketDemo();
+//        TicketDemo ticketDemo1 = new TicketDemo();
+//        TicketDemo ticketDemo2 = new TicketDemo();
+//        TicketDemo ticketDemo3 = new TicketDemo();
+        Thread thread = new Thread(ticketDemo);
+        Thread thread1 = new Thread(ticketDemo);
+        Thread thread2 = new Thread(ticketDemo);
+        Thread thread3 = new Thread(ticketDemo);
+        thread.start();
+        thread1.start();
+        thread2.start();
+        thread3.start();
+    }
 }
