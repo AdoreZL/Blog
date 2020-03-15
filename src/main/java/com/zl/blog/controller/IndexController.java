@@ -7,6 +7,7 @@ import com.zl.blog.service.UserService;
 import com.zl.blog.util.JblogUtil;
 import com.zl.blog.util.RedisKeyUntil;
 import com.zl.blog.model.*;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +29,7 @@ import java.util.Set;
  * @author zl
  */
 @Controller
+@Api(tags = "index")
 public class IndexController {
     @Autowired
     private ArticleService articleService;
@@ -46,7 +49,7 @@ public class IndexController {
     @RequestMapping(path = {"/","/index"})
     public String index(Model model){
         List<ViewObject> vos = new ArrayList<>();
-        List<Article> articles = articleService.getLatestArticles(0,4);
+        List<Article> articles = articleService.getLatestArticles(0,2);
         for (Article article:articles){
             ViewObject vo = new ViewObject();
             List<Tag> tags = tagService.getTagByArticleId(article.getId());

@@ -15,9 +15,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by zl on 17-7-26.
- * @author zl
+/*
+ * 功能描述: 邮件发送者
+ * @Param:
+ * @Return:
+ * @Author: ZL
+ * @Date: 2020/3/14 13:56
  */
 @Service
 public class EventConsumer implements InitializingBean,ApplicationContextAware{
@@ -28,7 +31,7 @@ public class EventConsumer implements InitializingBean,ApplicationContextAware{
     private ApplicationContext applicationContext;
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet(){
         Map<String,EventHandler> beans = applicationContext.getBeansOfType(EventHandler.class);
         if (beans!=null){
             for (Map.Entry<String,EventHandler> entry : beans.entrySet()){
@@ -49,8 +52,9 @@ public class EventConsumer implements InitializingBean,ApplicationContextAware{
                     String key = RedisKeyUntil.getEventQueue();
                     List<String> events = jedisService.brpop(0,key);
                     for (String event : events){
-                        if (event.equals(key))
+                        if (event.equals(key)) {
                             continue;
+                        }
                         EventModel model = JSON.parseObject(event,EventModel.class);
                         for (EventHandler handler:config.get(model.getType())){
                             handler.doHandler(model);

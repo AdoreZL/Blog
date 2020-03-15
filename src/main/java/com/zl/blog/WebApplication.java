@@ -4,13 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Created by tuzhenyu on 17-8-13.
  * @author tuzhenyu
  */
 @SpringBootApplication
-public class WebApplication extends SpringBootServletInitializer {
+public class WebApplication {
 //    // Tomcat需要主类有一个无参构造器
 //    public WebApplication() {
 //    }

@@ -1,17 +1,16 @@
 package com.zl.blog.controller;
 
 
+import com.zl.blog.model.*;
 import com.zl.blog.service.*;
 import com.zl.blog.util.JblogUtil;
 import com.zl.blog.util.RedisKeyUntil;
-import com.zl.blog.model.*;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,6 +22,7 @@ import java.util.Set;
  * @author zl
  */
 @Controller
+@Api(tags = {"articleIndex"},value = "articleIndex")
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
@@ -110,7 +110,9 @@ public class ArticleController {
         return "index";
     }
 
-    @RequestMapping("/articleAdd")
+
+    @PostMapping("/articleAdd")
+    @ApiOperation(value = "新增文章",tags = {"新增文章"})
     public String addArticle(@RequestParam("title")String title,@RequestParam("category")String category,
                              @RequestParam("tag")String tag,@RequestParam("describe")String describe,
                              @RequestParam("content")String content){

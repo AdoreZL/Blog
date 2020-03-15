@@ -1,18 +1,33 @@
 package com.zl.blog.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
 /**
  * Created by zl on 17-8-13.
  * @author zl
  */
+
+@ApiModel("文章请求实体")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Article {
     private int id;
+    @ApiModelProperty(value = "标题",dataType ="String" ,name = "title",example = "怎么学好Java")
     private String title;
+    @ApiModelProperty(value = "介绍",dataType ="String" ,name = "describes",example = "如何能学好Java")
     private String describes;
+    @ApiModelProperty(value = "内容",dataType ="String" ,name = "content",example = "请阅读Java编程思想")
     private String content;
     private Date createdDate;
     private int commentCount;
+    @ApiModelProperty(value = "种类",dataType ="String" ,name = "category",example = "Java")
     private String category;
 
     public int getId() {
