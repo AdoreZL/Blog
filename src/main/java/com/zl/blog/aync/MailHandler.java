@@ -24,7 +24,7 @@ public class MailHandler implements EventHandler{
         Map<String,Object> map = new HashMap<>();
         map.put("username",model.getExts("username"));
         map.put("articleId",model.getExts("articleId"));
-        mailSender.sendWithHTMLTemplate(model.getExts("email"),"有新的评论啦！","mail.html",map);
+        mailSender.sendwithhtmltemplate(model.getExts("email"),"有新的评论啦！","mail.html",map);
 
     }
 

@@ -25,7 +25,7 @@ public class MailSender implements InitializingBean {
     @Autowired
     private VelocityEngine velocityEngine;
 
-    public boolean sendWithHTMLTemplate(String to, String subject,
+    public boolean sendwithhtmltemplate(String to, String subject,
                                         String template, Map<String, Object> model) {
         try {
             String nick = MimeUtility.encodeText("呼啦啦");
