@@ -53,7 +53,7 @@ public class CommentController {
         eventProducer.fireEvent(new EventModel().setType(EventType.COMMENT)
                 .setActorId(hostHolder.getUser().getId())
                 .setExts("username",hostHolder.getUser().getName())
-                .setExts("email","adoreiron@gmail.com")
+                .setExts("email","zhenyutu@126.com")
                 .setExts("articleId",String.valueOf(articleId)));
 
         return "redirect:/article/"+articleId;
