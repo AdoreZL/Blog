@@ -9,7 +9,7 @@ public class TicketDemo implements Runnable{
     /*
     * 需求：卖票
     * */
-        private int num = 1000;
+    private int num = 100;
     Object obj = new Object();
 
     private void sale() {

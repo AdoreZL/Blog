@@ -23,6 +23,10 @@ public class ThreadTest {
     }
 
 
+    /*
+    * 同步中必须多个线程并且使用同一把锁
+    * */
+
     @Test
     public void ticketTest(){
         TicketDemo ticketDemo = new TicketDemo();
