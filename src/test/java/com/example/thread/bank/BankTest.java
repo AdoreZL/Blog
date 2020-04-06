@@ -25,4 +25,20 @@ public class BankTest{
         t1.start();
         t2.start();
     }
+
+    @Test
+    public void SString(){
+        String s1 = "abc";
+        String s2 = "abc";
+        if(s1.equals(s2)){
+            System.out.println("可以使用equals来比较");
+        }else {
+            System.out.println("不可以使用equals来比较");
+        }
+        if(s1==s2){
+            System.out.println("可以使用==来比较");
+        }else {
+            System.out.println("不可以使用==来比较");
+        }
+    }
 }
