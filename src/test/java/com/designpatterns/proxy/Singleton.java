@@ -1,5 +1,4 @@
 package com.designpatterns.proxy;
-
 /**
  * @author: ZL
  * @Date: 2020/6/6 16:35

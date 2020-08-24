@@ -10,9 +10,12 @@ package com.example.thread;
  */
 public class MultithreadingTest {
     public static void main(String[] args) {
-        printNumber printNumber = new printNumber();
-        new PrintLetterThread(printNumber).start();
-        new PrintNumberThread(printNumber).start();
+        String s = "abc";
+        String x = "123";
+        System.out.println(s+x);
+//        printNumber printNumber = new printNumber();
+//        new PrintLetterThread(printNumber).start();
+//        new PrintNumberThread(printNumber).start();
     }
 }
 

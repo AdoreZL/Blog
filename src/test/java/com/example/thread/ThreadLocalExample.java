@@ -1,5 +1,8 @@
 package com.example.thread;
 
+import lombok.extern.slf4j.Slf4j;
+import sun.rmi.runtime.Log;
+
 import java.text.SimpleDateFormat;
 import java.util.Random;
 /**
@@ -7,17 +10,19 @@ import java.util.Random;
  * @Date: 2020/6/9 10:50
  * @Description:
  */
+@Slf4j
 public class ThreadLocalExample implements Runnable {
     // SimpleDateFormat 不是线程安全的，所以每个线程都要有自己独立的副本
     private static final ThreadLocal<SimpleDateFormat> formatter = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyyMMdd HHmm"));
 
     public static void main(String[] args) throws InterruptedException{
-        ThreadLocalExample obj = new ThreadLocalExample();
-        for (int i = 0; i <10; i++) {
-            Thread t = new Thread(obj, "" + i);
-            Thread.sleep(new Random().nextInt(1000));
-            t.start();
-        }
+//        ThreadLocalExample obj = new ThreadLocalExample();
+//        for (int i = 0; i <10; i++) {
+//            Thread t = new Thread(obj, "" + i);
+//            Thread.sleep(new Random().nextInt(1000));
+//            t.start();
+//        }
+        test();
     }
 
 
@@ -33,5 +38,18 @@ public class ThreadLocalExample implements Runnable {
         formatter.set(new SimpleDateFormat());
 
         System.out.println("Thread Name= "+Thread.currentThread().getName()+" formatter = "+formatter.get().toPattern());
+    }
+
+    private static void test() {
+        final ThreadLocal threadLocal = new InheritableThreadLocal();
+        threadLocal.set("帅得一匹");
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                log.info( "张三帅么 =" + threadLocal.get());
+            }
+        };
+        t.start();
     }
 }
