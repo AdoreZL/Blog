@@ -203,7 +203,7 @@ public class CheeseCar{
                     }
                     // 一次生产一份
                     starterInt.incrementAndGet();
-                    System.out.println(y++ + " 生产了一份 starterInt: " + starterInt.get());
+                    System.out.println(y++ + " 生产了一份 奶酪: " + starterInt.get());
                     lock.signalStarter();
                 }catch (Exception e){
                     e.printStackTrace();
